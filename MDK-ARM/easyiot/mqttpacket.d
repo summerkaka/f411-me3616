@@ -1,0 +1,11 @@
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTPacket.c
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\StackTrace.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTPacket.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTConnect.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTPublish.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTSubscribe.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTUnsubscribe.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTFormat.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\PACK\MDK-Packs\Paho_MQTT\1.0.0\MQTTPacket\src\MQTTPacket.h
+easyiot\mqttpacket.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
