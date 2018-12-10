@@ -1538,10 +1538,6 @@ void HAL_UART_IRQHandler(UART_HandleTypeDef *huart)
       UART_Receive_IT(huart);
       return;
     }
-    else if (isrflags & USART_SR_IDLE != RESET)
-    {
-        
-    }
   }  
 
   /* If some errors occur */

@@ -18,5 +18,5 @@ extern char time_stamp[];
 extern int8_t connect_iotnet(void);
 extern int8_t lwm2mcli_new(void);
 extern int8_t lwm2mcli_del(void);
-extern int8_t lwm2mcli_send(char *message, uint8_t length);
+extern int8_t lwm2mcli_notify(char *message, uint8_t length);
 

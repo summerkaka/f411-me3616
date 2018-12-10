@@ -45,12 +45,14 @@
 #include "gpio.h"
 
 #include "ME3616.h"
+#include "device.h"
 
 /* Private variables ---------------------------------------------------------*/
 
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+uint32_t time = 0;
 
 
 /* USER CODE BEGIN PFP */
@@ -75,11 +77,17 @@ int main(void)
     MX_USB_OTG_FS_PCD_Init();
     MX_USART6_UART_Init();
     
+    printf("****************************************\n\r");
+    printf("ME3616 easy-iot\n\r");
+    printf("****************************************\n\r");
     connect_iotnet();
     printf("enter main loop...\n\r");
     while (1)
     {
-        
+        if (HAL_GetTick() - time >= 10000) {
+            time = HAL_GetTick();
+            device_report();
+        }
     }
 }
 
@@ -139,10 +147,6 @@ void SystemClock_Config(void)
     HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
-/* USER CODE BEGIN 4 */
-
-/* USER CODE END 4 */
-
 /**
   * @brief  This function is executed in case of error occurrence.
   * @param  file: The file name as string.
@@ -151,12 +155,9 @@ void SystemClock_Config(void)
   */
 void _Error_Handler(char *file, int line)
 {
-    /* USER CODE BEGIN Error_Handler_Debug */
-    /* User can add his own implementation to report the HAL error return state */
+    printf("error: file: %s, line: %d\n\r", file, line);
     while (1)
-    {
-    }
-    /* USER CODE END Error_Handler_Debug */
+    {}
 }
 
 #ifdef USE_FULL_ASSERT
@@ -169,10 +170,7 @@ void _Error_Handler(char *file, int line)
   */
 void assert_failed(uint8_t *file, uint32_t line)
 {
-    /* USER CODE BEGIN 6 */
-    /* User can add his own implementation to report the file name and line number,
-     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-    /* USER CODE END 6 */
+    
 }
 #endif /* USE_FULL_ASSERT */
 
